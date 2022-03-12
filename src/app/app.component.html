@@ -1,0 +1,64 @@
+<nz-layout class="app-layout">
+  <nz-sider class="menu-sidebar"
+            nzCollapsible
+            nzWidth="275px"
+            nzBreakpoint="md"
+            [(nzCollapsed)]="isCollapsed"
+            [nzTrigger]="null">
+    <div class="sidebar-logo">
+      <a href="/home">
+        <img src="favicon.ico" alt="logo">
+        <h1 class="logo-text">Joshua Carrasco Sousa</h1>
+      </a>
+    </div>
+    <ul nz-menu nzTheme="light" nzMode="inline" [nzInlineCollapsed]="isCollapsed" class="sidebar-list">
+      <li nz-submenu nzOpen nzTitle="Me" nzIcon="user">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/home">Home</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/documents">Documents</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/about">About Me</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/contact">Contact Me</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzOpen nzTitle="Experiences" nzIcon="radar-chart">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/at-caseware">CaseWare International</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzOpen nzTitle="Projects" nzIcon="form">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/project-bfs">BFS</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <!-- <nz-header>
+      <div class="app-header">
+        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+            <i class="trigger"
+               nz-icon
+               [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+            ></i>
+        </span>
+      </div>
+    </nz-header> -->
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
