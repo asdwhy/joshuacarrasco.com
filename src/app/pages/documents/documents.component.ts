@@ -16,11 +16,11 @@ export class DocumentsComponent implements OnInit {
   }
 
   openResume(): void {
-    window.open("assets/resume-updated.pdf", "_blank");
+    window.open("assets/resume.pdf", "_blank");
   }
 
   openCoverletter(): void {
-    window.open("assets/CoverLetter_software_dev@caseware.pdf", "_blank");
+    window.open("assets/coverletter.pdf", "_blank");
   }
 
 }
