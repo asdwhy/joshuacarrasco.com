@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: 'about', loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule) },
   { path: 'at-caseware', loadChildren: () => import('./pages/caseware/caseware.module').then(m => m.CasewareModule) },
   { path: 'documents', loadChildren: () => import('./pages/documents/documents.module').then(m => m.DocumentsModule) },
-  { path: 'project-bfs', loadChildren: () => import('./pages/bfs/bfs.module').then(m => m.BfsModule) },
+  { path: 'project-learnera', loadChildren: () => import('./pages/bfs/bfs.module').then(m => m.BfsModule) },
   { path: 'contact', loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule) }
 ];
 

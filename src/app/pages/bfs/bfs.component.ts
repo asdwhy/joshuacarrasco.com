@@ -15,6 +15,6 @@ export class BfsComponent implements OnInit {
   }
 
   openDemo(): void {
-    window.open("http://bfs.joshuacarrasco.com", "_blank");
+    window.open("https://learnera.joshuacarrasco.com", "_blank");
   }
 }
