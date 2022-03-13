@@ -8,10 +8,6 @@ import { Router } from '@angular/router';
 })
 export class DocumentsComponent implements OnInit {
 
-  constructor(
-    private routerService: Router
-  ) { }
-
   ngOnInit(): void {
   }
 
