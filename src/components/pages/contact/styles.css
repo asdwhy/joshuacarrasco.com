@@ -5,3 +5,7 @@
 form {
     padding-bottom: 1em;
 }
+
+.section .message {
+    margin-bottom: 1em;
+}
