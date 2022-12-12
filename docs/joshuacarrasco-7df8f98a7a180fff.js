@@ -915,7 +915,7 @@ function initSync(module) {
 
 async function init(input) {
     if (typeof input === 'undefined') {
-        input = new URL('joshuacarrasco-e52ba47b26f206ac_bg.wasm', import.meta.url);
+        input = new URL('joshuacarrasco-7df8f98a7a180fff_bg.wasm', import.meta.url);
     }
     const imports = getImports();
 
