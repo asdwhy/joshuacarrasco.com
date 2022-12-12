@@ -1,0 +1,13 @@
+li:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+:root {
+    padding: 5px;
+}
+
+.jc-content-list-title {
+    text-align: right;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}

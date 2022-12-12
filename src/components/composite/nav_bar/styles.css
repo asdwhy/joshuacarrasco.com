@@ -1,0 +1,17 @@
+
+.navbar-item a:not(:last-child) {
+    margin-right: 12px;
+}
+
+.navbar-item a {
+    /* color: black; */
+    font-weight: 500;
+}
+
+:root {
+    margin: 50px;
+}
+
+.jc-identity p {
+    margin-left: 10px;
+}
