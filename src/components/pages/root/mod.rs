@@ -39,18 +39,18 @@ pub fn root() -> Html {
         <div class={styles}>
             <section class="section jc-root-top">
                 <div class="hero-body">
-                    <p class="title jc-root-identity">
+                    <p class="title jc-root-identity is-size-5-mobile">
                         <img class="jc-logo" src="/assets/favicon.png"/ >
                         {"Joshua Carrasco Sousa"}
                     </p>
 
-                    <p class="subtitle">
+                    <p class="jc-root-subtitle">
                         {"Computer Science student at the University of Toronto"}
                     </p>
                 </div>
             </section>
             
-            <section class="section jc-bottom">
+            <section class="section jc-root-bottom">
                 <div class="columns">
                     <div class="column">
                         <ContentList title="JCS" content={jcs}/>

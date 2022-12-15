@@ -1,3 +1,11 @@
 .section {
-    padding: 0em 16em;
+    padding: 0em 1em;
+}
+
+@media only screen and (min-width: 768px) {
+    /* for desktop */
+
+    .section {
+        padding: 0em 16em;
+    }
 }
