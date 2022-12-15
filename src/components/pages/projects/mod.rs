@@ -31,13 +31,15 @@ pub fn projects(props: &Props) -> Html {
     let list = get_projects(project_name);
 
     html! {
-        <div class={classes!(styles, "content")}>
+        <>
             <NavBar/>
 
-            <SectionList    title={title}
-                            subtitle={subtitle}
-                            sections={list}/>
-        </div>
+            <div class={classes!(styles, "content")}>
+                <SectionList    title={title}
+                                subtitle={subtitle}
+                                sections={list}/>
+            </div>
+        </>
     }
 }
 

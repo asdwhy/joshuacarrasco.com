@@ -19,7 +19,7 @@ pub fn content_list(props: &Props) -> Html {
     let styles = Style::new(STYLE_FILE).unwrap();
 
     html! {
-        <section class={classes!(styles, "section", "columns")}>
+        <div class={classes!(styles, "columns")}>
             <div class="column is-one-third jc-content-list-title">
                 <p>{props.title.clone()}</p>
             </div>
@@ -28,7 +28,7 @@ pub fn content_list(props: &Props) -> Html {
                     { content_to_list(props.content.clone()) }
                 </ul>
             </div>
-        </section>
+        </div>
     }
 }
 

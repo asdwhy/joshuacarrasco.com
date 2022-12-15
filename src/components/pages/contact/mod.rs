@@ -110,49 +110,51 @@ pub fn contact() -> Html {
     };
 
     html! {
-        <div class={classes!(styles, "content")}>
+        <>
             <NavBar/>
-            <section class="section">
-                <h1 class="title">{"Contact Me"}</h1>
-                
-                <form {onsubmit}>
-                    <div class="field">
-                        <label class="label">{"Name"}</label>
-                        <div class="control">
-                            <TextInput onchange={name_changed} input_type="text" placeholder="John Smith"/>
+            <div class={classes!(styles, "content")}>
+                <section class="section">
+                    <h1 class="title">{"Contact Me"}</h1>
+                    
+                    <form {onsubmit}>
+                        <div class="field">
+                            <label class="label">{"Name"}</label>
+                            <div class="control">
+                                <TextInput onchange={name_changed} input_type="text" placeholder="John Smith"/>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="field">
-                        <label class="label">{"Email"}</label>
-                        <div class="control">
-                            <TextInput onchange={email_changed} input_type="email" placeholder="myemail@email.com"/>
+                        <div class="field">
+                            <label class="label">{"Email"}</label>
+                            <div class="control">
+                                <TextInput onchange={email_changed} input_type="email" placeholder="myemail@email.com"/>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="field">
-                        <label class="label">{"Message"}</label>
-                        <div class="control">
-                            <TextArea onchange={message_changed} placeholder="write anything"/>
+                        <div class="field">
+                            <label class="label">{"Message"}</label>
+                            <div class="control">
+                                <TextArea onchange={message_changed} placeholder="write anything"/>
+                            </div>
                         </div>
-                    </div>
 
-                    <fieldset disabled={!*filled_flag}>
-                    <div class="field">
-                        <div class="control">
-                            <button class="button is-link">{"Submit"}</button>
+                        <fieldset disabled={!*filled_flag}>
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-link">{"Submit"}</button>
+                            </div>
                         </div>
-                    </div>
-                    </fieldset>
-                </form>
+                        </fieldset>
+                    </form>
 
-                if *feedback_visibility == FeedbackType::Success {
-                    <Feedback title="Success" feedback_type={FeedbackType::Success} close_button_callback={on_close_feedback} label="I will get back to you as soon as possible"/>
-                } else if *feedback_visibility == FeedbackType::Error {
-                    <Feedback title="Failure" feedback_type={FeedbackType::Error} close_button_callback={on_close_feedback} label="Something went wrong and your message couldn't send..."/>
-                }
-                
-            </section>
-        </div>
+                    if *feedback_visibility == FeedbackType::Success {
+                        <Feedback title="Success" feedback_type={FeedbackType::Success} close_button_callback={on_close_feedback} label="I will get back to you as soon as possible"/>
+                    } else if *feedback_visibility == FeedbackType::Error {
+                        <Feedback title="Failure" feedback_type={FeedbackType::Error} close_button_callback={on_close_feedback} label="Something went wrong and your message couldn't send..."/>
+                    }
+                    
+                </section>
+            </div>
+        </>
     }
 }

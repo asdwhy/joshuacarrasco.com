@@ -1,17 +1,20 @@
-
-.navbar-item a:not(:last-child) {
-    margin-right: 12px;
-}
-
-.navbar-item a {
-    /* color: black; */
-    font-weight: 500;
-}
-
 :root {
-    margin: 50px;
+    margin: 2em;
+    margin-bottom: 0em;
 }
 
-.jc-identity p {
-    margin-left: 10px;
+@media only screen and (min-width: 768px) {
+    /* for desktop */
+
+    :root {
+        margin: 3em;
+    }
+
+    .breadcrumb {
+        font-weight: 500;
+    }
+
+    .jc-identity p {
+        margin-left: 1em;
+    }
 }

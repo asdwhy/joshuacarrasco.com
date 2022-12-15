@@ -16,34 +16,21 @@ pub fn nav_bar() -> Html {
                 <div class="navbar-start">
                     <Link<Route> to={Route::RootPage} classes="navbar-item jc-identity">
                         <img class="jc-logo" src="/assets/favicon.png"/ >
-                        <p>{"Joshua Carrasco Sousa"}</p>
+                        <p class="is-size-6">{"Joshua Carrasco Sousa"}</p>
                     </Link<Route>>
                 </div>
             </div>
+            
+            <nav class="breadcrumb navbar-item is-size-7-mobile" aria-label="breadcrumbs">
+                <ul>
+                    <li><Link<Route> to={Route::AboutPage}>{ "About" }</Link<Route>></li>
+                    <li><Link<Route> to={Route::ProjectsPage}>{ "Projects" }</Link<Route>></li>
+                    <li><Link<Route> to={Route::ExperiencePage}>{ "Experience" }</Link<Route>></li>
+                    <li><Link<Route> to={Route::ContactPage}>{ "Contact Me" }</Link<Route>></li>
+                </ul>
+          </nav>
 
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <Link<Route> to={Route::AboutPage}>{ "About" }</Link<Route>>
-                </div>
-                <div class="navbar-item">
-                    {"/"}
-                </div>
-                <div class="navbar-item">
-                    <Link<Route> to={Route::ProjectsPage}>{ "Projects" }</Link<Route>>
-                </div>
-                <div class="navbar-item">
-                    {"/"}
-                </div>
-                <div class="navbar-item">
-                    <Link<Route> to={Route::ExperiencePage}>{ "Experience" }</Link<Route>>
-                </div>
-                <div class="navbar-item">
-                    {"/"}
-                </div>
-                <div class="navbar-item">
-                    <Link<Route> to={Route::ContactPage}>{ "Contact Me" }</Link<Route>>
-                </div>
-            </div>
+            
         </nav>
     }
 }
