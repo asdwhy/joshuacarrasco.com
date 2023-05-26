@@ -30,7 +30,7 @@ pub fn root() -> Html {
     ];
 
     let other: Vec<(String, URL)> = vec![
-        ("Resume".to_owned(), URL::ExternalTarget{ url: "/assets/2022_12_12_resume.pdf".to_owned(), target: "_blank".to_owned()}),
+        ("Resume".to_owned(), URL::ExternalTarget{ url: "/assets/resume.pdf".to_owned(), target: "_blank".to_owned()}),
         ("Github".to_owned(), URL::External("https://github.com/asdwhy".to_owned())),
         ("Source Code".to_owned(), URL::External("https://github.com/asdwhy/asdwhy.github.io".to_owned()))
     ];
