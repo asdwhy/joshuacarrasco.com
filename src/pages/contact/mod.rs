@@ -1,7 +1,7 @@
-use crate::components::composite::nav_bar::NavBar;
-use crate::components::atomic::text_input::TextInput;
-use crate::components::atomic::text_area::TextArea;
-use crate::components::atomic::feedback::{Feedback,FeedbackType};
+use crate::composite::nav_bar::NavBar;
+use crate::atomic::text_input::TextInput;
+use crate::atomic::text_area::TextArea;
+use crate::atomic::feedback::{Feedback,FeedbackType};
 
 use reqwasm::http::Request;
 use stylist::{yew::styled_component, Style};

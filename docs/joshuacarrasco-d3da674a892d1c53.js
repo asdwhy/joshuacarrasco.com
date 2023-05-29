@@ -853,7 +853,7 @@ function getImports() {
         const ret = makeMutClosure(arg0, arg1, 14, __wbg_adapter_32);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper633 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper685 = function(arg0, arg1, arg2) {
         const ret = makeMutClosure(arg0, arg1, 14, __wbg_adapter_37);
         return addHeapObject(ret);
     };
@@ -893,7 +893,7 @@ function initSync(module) {
 
 async function init(input) {
     if (typeof input === 'undefined') {
-        input = new URL('joshuacarrasco-a081e01588aa680b_bg.wasm', import.meta.url);
+        input = new URL('joshuacarrasco-d3da674a892d1c53_bg.wasm', import.meta.url);
     }
     const imports = getImports();
 

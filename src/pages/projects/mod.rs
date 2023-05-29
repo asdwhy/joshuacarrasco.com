@@ -1,13 +1,14 @@
-use crate::components::composite::nav_bar::NavBar;
-use crate::components::composite::section_list::SectionList;
-use crate::components::sections::learnera::Learnera;
-use crate::components::sections::pepes_bubbles::PepesBubbles;
+use crate::composite::nav_bar::NavBar;
+use crate::composite::section_list::SectionList;
+use crate::sections::learnera::Learnera;
+use crate::sections::pepes_bubbles::PepesBubbles;
+use crate::sections::path_tracer::PathTracer;
+use crate::sections::other::Other;
 
 use stylist::{yew::styled_component, Style};
 use yew::prelude::*;
 
 const STYLE_FILE: &str = include_str!("styles.css");
-
 #[derive(Clone, PartialEq, Properties)]
 pub struct Props {
     pub query: String
@@ -17,6 +18,8 @@ pub struct Props {
 enum ProjectName {
     ProjectPepesBubbles,
     ProjectLearnera,
+    ProjectPathTracer,
+    ProjectOther,
     All
 }
 
@@ -29,7 +32,7 @@ pub fn projects(props: &Props) -> Html {
     let title = "Projects";
     let subtitle = if project_name == ProjectName::All { "A little bit about some projects I've worked on" } else { "" };
     let list = get_projects(project_name);
-
+    
     html! {
         <>
             <NavBar/>
@@ -48,6 +51,10 @@ fn parse_query(query: &String) -> ProjectName {
         ProjectName::ProjectPepesBubbles
     } else if query == "learnera" {
         ProjectName::ProjectLearnera
+    } else if query == "pathtracer" {
+        ProjectName::ProjectPathTracer
+    } else if query == "other" {
+        ProjectName::ProjectOther
     } else {
         ProjectName::All
     }
@@ -59,10 +66,15 @@ fn get_projects(query: ProjectName) -> Vec<Html> {
     match query {
         ProjectName::ProjectPepesBubbles => {ret.push(html!{ <PepesBubbles/> }); ret} ,
         ProjectName::ProjectLearnera => {ret.push(html!{ <Learnera/> }); ret},
+        ProjectName::ProjectPathTracer => {ret.push(html!{ <PathTracer/> }); ret},
+        ProjectName::ProjectOther => {ret.push(html!{ <Other/> }); ret},
         ProjectName::All => {
             ret.push(html!{ <PepesBubbles summary={true}/> });
             ret.push(html!{ <Learnera summary={true}/> });
+            ret.push(html!{ <PathTracer summary={true}/> });
+            ret.push(html!{ <Other summary={true}/> });
             ret
         }
     }
 }
+

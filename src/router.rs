@@ -1,8 +1,8 @@
-use crate::components::pages::root::RootPage;
-use crate::components::pages::about::AboutPage;
-use crate::components::pages::projects::ProjectsPage;
-use crate::components::pages::contact::ContactPage;
-use crate::components::pages::experience::ExperiencePage;
+use crate::pages::root::RootPage;
+use crate::pages::about::AboutPage;
+use crate::pages::projects::ProjectsPage;
+use crate::pages::contact::ContactPage;
+use crate::pages::experience::ExperiencePage;
 
 use yew::prelude::*;
 use yew_router::prelude::*;

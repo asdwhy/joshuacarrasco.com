@@ -1,4 +1,4 @@
-use crate::components::composite::content_list::ContentList;
+use crate::composite::content_list::ContentList;
 use crate::router::URL;
 use crate::router::Route;
 
@@ -27,6 +27,8 @@ pub fn root() -> Html {
     let projects: Vec<(String, URL)> = vec![
         ("Learnera".to_owned(), URL::Internal(Route::ProjectsPageName { name: "learnera".to_owned() })),
         ("Pepes Bubbles".to_owned(), URL::Internal(Route::ProjectsPageName { name: "pepesbubbles".to_owned() })),
+        ("Path Tracer".to_owned(), URL::Internal(Route::ProjectsPageName { name: "pathtracer".to_owned() })),
+        ("Other Projects".to_owned(), URL::Internal(Route::ProjectsPageName { name: "other".to_owned() })),
     ];
 
     let other: Vec<(String, URL)> = vec![
@@ -45,7 +47,7 @@ pub fn root() -> Html {
                     </p>
 
                     <p class="jc-root-subtitle">
-                        {"Computer Science student at the University of Toronto"}
+                        {"Software Engineer"}
                     </p>
                 </div>
             </section>

@@ -1,4 +1,4 @@
-use crate::components::composite::nav_bar::NavBar;
+use crate::composite::nav_bar::NavBar;
 
 use stylist::{yew::styled_component, Style};
 use yew::prelude::*;
@@ -18,13 +18,12 @@ pub fn about() -> Html {
                     <h1 class="title">{"About Me"}</h1>
                     <p>
                         {"
-                            My name is Joshua Carrasco Sousa and I'm a 4th year student at the 
-                            University of Toronto in the Computer Science Co-op program and I
-                            like making software!
+                            My name is Joshua Carrasco Sousa and I graduated from the University of Toronto
+                            with a bachelors in Computer Science. I like music, computers, games, and making software!
                         "} 
                     </p>
                     <br/>
-                    <strong>{"Statement of originality"}</strong>
+                    <strong>{"Statement of Originality"}</strong>
                     <p>
                         {"
                             I, Joshua E. Carrasco Sousa, certify that this portfolio and the included 

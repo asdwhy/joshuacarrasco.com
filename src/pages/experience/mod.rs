@@ -1,6 +1,6 @@
-use crate::components::composite::nav_bar::NavBar;
-use crate::components::composite::section_list::SectionList;
-use crate::components::sections::caseware::CasewarePage;
+use crate::composite::nav_bar::NavBar;
+use crate::composite::section_list::SectionList;
+use crate::sections::caseware::CasewarePage;
 
 use stylist::{yew::styled_component, Style};
 use yew::prelude::*;
