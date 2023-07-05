@@ -16,7 +16,7 @@ pub fn nav_bar() -> Html {
                 <div class="navbar-start">
                     <Link<Route> to={Route::RootPage} classes="navbar-item jc-identity">
                         <img class="jc-logo" src="/assets/favicon.png"/ >
-                        <p class="is-size-6">{"Joshua Carrasco Sousa"}</p>
+                        <p class="is-size-6">{"Joshua Carrasco"}</p>
                     </Link<Route>>
                 </div>
             </div>

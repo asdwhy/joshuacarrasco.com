@@ -18,7 +18,7 @@ pub fn about() -> Html {
                     <h1 class="title">{"About Me"}</h1>
                     <p>
                         {"
-                            My name is Joshua Carrasco Sousa and I graduated from the University of Toronto
+                            My name is Joshua Carrasco and I graduated from the University of Toronto
                             with a bachelors in Computer Science. I like music, computers, games, and making software!
                         "} 
                     </p>
@@ -26,7 +26,7 @@ pub fn about() -> Html {
                     <strong>{"Statement of Originality"}</strong>
                     <p>
                         {"
-                            I, Joshua E. Carrasco Sousa, certify that this portfolio and the included 
+                            I, Joshua E. Carrasco, certify that this portfolio and the included 
                             works are that of my own and any ideas or quotations from the work of 
                             others have been fully acknowledged. Please do not copy without my 
                             permission.

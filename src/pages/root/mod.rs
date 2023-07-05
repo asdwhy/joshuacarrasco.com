@@ -43,7 +43,7 @@ pub fn root() -> Html {
                 <div class="hero-body">
                     <p class="title jc-root-identity is-size-5-mobile">
                         <img class="jc-logo" src="/assets/favicon.png"/ >
-                        {"Joshua Carrasco Sousa"}
+                        {"Joshua Carrasco"}
                     </p>
 
                     <p class="jc-root-subtitle">
