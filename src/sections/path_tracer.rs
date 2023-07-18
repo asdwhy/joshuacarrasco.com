@@ -35,15 +35,15 @@ pub fn path_tracer(props: &Props) -> Html {
                 <a href="https://raytracing.github.io/">{"Ray Tracing in One Weekend Series"}</a>
                 {"."}
             </p>
+            <a href="https://github.com/asdwhy/jrpt">{"Github Repository for the path tracer"}</a>
             
             if !summary {
+                <br/><br/>
                 <p>{"Here are some images that I rendered:"}</p>
                 <img src="/assets/scene.png"/>
                 <img src="/assets/monkey+cornell.png"/>
-                <br/>
+                
             }
-
-            <a href="https://github.com/asdwhy/jrpt">{"Github Repository for the path tracer"}</a>
         </div>
     }
 }

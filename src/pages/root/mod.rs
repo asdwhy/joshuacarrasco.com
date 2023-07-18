@@ -26,7 +26,7 @@ pub fn root() -> Html {
 
     let projects: Vec<(String, URL)> = vec![
         ("Learnera".to_owned(), URL::Internal(Route::ProjectsPageName { name: "learnera".to_owned() })),
-        ("Pepes Bubbles".to_owned(), URL::Internal(Route::ProjectsPageName { name: "pepesbubbles".to_owned() })),
+        ("Pepes Bubbles (Online Storefront)".to_owned(), URL::Internal(Route::ProjectsPageName { name: "pepesbubbles".to_owned() })),
         ("Path Tracer".to_owned(), URL::Internal(Route::ProjectsPageName { name: "pathtracer".to_owned() })),
         ("Other Projects".to_owned(), URL::Internal(Route::ProjectsPageName { name: "other".to_owned() })),
     ];

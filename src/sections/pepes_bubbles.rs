@@ -23,12 +23,18 @@ pub fn pepes_bubbles(props: &Props) -> Html {
                 Pepes Bubbles is a group project I worked on from February 2022 to April 2022.
             "}
             </p>
+
+            <p>
+            {"
+                A live demo of this project is hosted at "} <a href="https://pepesbubbles.joshuacarrasco.com">{"https://pepesbubbles.joshuacarrasco.com"}</a>
+                {". Note that integrations with Google Maps, Google SSO, and PayPal don't work in this demo because I didn't want to upkeep API keys."}
+            </p>
             
             <p>
             {"
-                Pepes Bubbles is a online storefront for an imaginary Bubble Tea store called 'Pepes Bubbles'
+                Pepes Bubbles is a online storefront for a fictional Bubble Tea store called 'Pepes Bubbles'
                 that we made up. The name/theme of the storefront was arbitrary, as the project was mainly to
-                exercise and demonstrate our web-development skills.                  
+                exercise and demonstrate our web-development skills.              
             "}
             </p>
 
@@ -43,6 +49,7 @@ pub fn pepes_bubbles(props: &Props) -> Html {
                 </p>
                 <p>{"See an extensive description of this project in the project repository."}</p>
             }
+
             <a href="https://github.com/asdwhy/pepes-bubbles">{"Github Repository for Pepes Bubbles"}</a>
         </div>
     }
