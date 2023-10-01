@@ -23,12 +23,6 @@ pub fn pepes_bubbles(props: &Props) -> Html {
                 Pepes Bubbles is a group project I worked on from February 2022 to April 2022.
             "}
             </p>
-
-            <p>
-            {"
-                A live demo of this project is hosted at "} <a href="https://pepesbubbles.joshuacarrasco.com">{"https://pepesbubbles.joshuacarrasco.com"}</a>
-                {". Note that integrations with Google Maps, Google SSO, and PayPal don't work in this demo because I didn't want to upkeep API keys."}
-            </p>
             
             <p>
             {"
