@@ -13,7 +13,6 @@ pub fn root() -> Html {
     let styles = Style::new(STYLE_FILE).unwrap();
 
     let jcs: Vec<(String, URL)> = vec![
-        ("Home".to_owned(), URL::Internal(Route::RootPage)),
         ("About".to_owned(), URL::Internal(Route::AboutPage)),
         ("Projects".to_owned(), URL::Internal(Route::ProjectsPage)),
         ("Experiences".to_owned(), URL::Internal(Route::ExperiencePage)),
