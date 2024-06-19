@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "iosevka";
+  src: url("/fonts/IosevkaAile-Regular.ttc");
+}
+
+body {
+  font-family: "iosevka";
+}
+
+a:not(.disable-marked) {
+  opacity: 1;
+  color: black;
+}
+
+a:hover:not(.disable-marked) {
+  transition: 0.3s ease;
+  opacity: 0.8;
+  background: #f5dda9;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  max-width: 100%;
+}

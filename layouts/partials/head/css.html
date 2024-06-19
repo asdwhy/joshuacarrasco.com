@@ -1,0 +1,9 @@
+{{ $css := resources.Match "css/*.css" }}
+{{ $css = $css | resources.Concat "styles.css" }}
+
+{{- if eq hugo.Environment "development" }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{- else }}
+{{ $css = $css | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+{{- end }}

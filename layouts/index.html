@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+<h1>Nice to meet you!</h1>
+<p>I'm passionate about software, programming, math!</p>
+<p>Sometimes, I'm compelled to write about it on the internet.</p>
+
+<div>
+    {{ range .Site.MainSections }}
+    <h5>{{ . | strings.FirstUpper }}</h5>
+
+    <ul>
+        {{ range where $.Site.RegularPages "Section" . }}
+        <li>
+            <a href="{{ .RelPermalink }}" class="marked">{{ .LinkTitle }}</a>
+            ({{ .Date | time.Format ":date_medium" }})
+        </li>
+        {{ end }}
+
+        {{ with $.Site.GetPage "section" . }}
+        <li>
+            <a href="{{ .RelPermalink }}" class="marked">
+                See more
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</div>
+{{ end }}

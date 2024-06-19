@@ -1,0 +1,61 @@
+baseURL = 'https://www.joshuacarrasco.com'
+languageCode = 'en-us'
+title = '~'
+
+[params]
+  mainSections = ['posts', 'experience']
+
+  [[author]]
+    name = "Joshua Carrasco Sousa"
+    email = "mail@joshuacarrasco.com"
+
+[taxonomies]
+  tag = 'tags'
+
+[menu]
+  [[menu.nav]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = 1
+  # pre denotes the icon from https://feathericons.com/
+  # see layouts/partials/header.html
+  pre = "home"
+
+  [[menu.nav]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts"
+  weight = 2
+  pre = "book"
+
+  [[menu.nav]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags"
+  weight = 3
+  pre = "tag"
+
+  [[menu.nav]]
+  identifier = "rss"
+  name = "RSS"
+  url = "/posts/index.xml"
+  weight = 5
+  pre = "rss"
+
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noHl = false
+    noClasses = false # override style with static/css/syntax.css
+    style = 'xcode'
+    tabWidth = 4

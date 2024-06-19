@@ -1,0 +1,15 @@
+<hgroup class="text-center mb-5">
+    <h1>{{ .Title }}</h1>
+
+    {{ with .GetTerms "tags" }}
+    {{ range . }}
+
+    <a class="marked" href="{{ .RelPermalink }}">
+        <i data-feather="tag" style="stroke-width: 1.5px; height: 18px;"></i>
+        {{- .LinkTitle -}}
+    </a>
+    {{ end }}
+    {{ end }}
+
+    <p>{{ .Date | time.Format ":date_medium" }}</p>
+</hgroup>

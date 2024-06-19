@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<h1 class="text-center mb-5">{{ .Title | strings.FirstUpper }}</h1>
+
+{{range $name, $taxonomy := .Site.Taxonomies.tags}}
+{{ $cnt := .Count }}
+{{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+<div class="tagbutton text-center">
+    <a href={{ .RelPermalink }} title="All pages with tag {{$name}}" class="marked">
+        <i data-feather="tag" style="width: 20px;"></i>
+        {{- $name -}}
+    </a>
+    <abbr>({{ $cnt }})</abbr>
+</div>
+{{ end }}
+{{ end }}
+{{ end }}
