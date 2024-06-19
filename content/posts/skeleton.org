@@ -37,3 +37,20 @@ let x = 10;;
 Make a [[https://gohugo.io/content-management/page-bundles/][page-bundle]] and reference the image like this
 
 [[./name-of-image.png]]
+
+* Font
+
+Normal text
+
+/italics/
+
+*bold*
+
+_underline_
+
+=monospace=
+
++strikethrough+
+
+~code~
+
