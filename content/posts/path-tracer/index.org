@@ -1,0 +1,22 @@
+#+TITLE: Path Tracer
+#+DATE: 2023-09-20
+#+AUTHOR: Joshua Carrasco Sousa
+#+DRAFT: false
+#+KATEX: true
+#+TAGS[]: graphics
+
+When I was learning Rust, I made a path tracer as a fun project. This is a brute force path tracer, not meant to produce images in real time, but rather realistic images.
+
+# more
+
+* Description
+
+In university I took a computer graphics course and I really enjoyed it! I wanted to take it to the next level and re-wrote the project in Rust and added some features from the classic [[https://raytracing.github.io/][Ray Tracing in One Weekend Series]].
+
+[[https://github.com/jecars/jrpt][Github Repository for the path tracer]]
+
+Here are some images that I rendered:
+
+[[./monkey+cornell.png]]
+
+[[./scene.png]]

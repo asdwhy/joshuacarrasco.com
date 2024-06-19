@@ -1,0 +1,20 @@
+#+TITLE: Pepe's Bubbles
+#+DATE: 2022-05-01
+#+AUTHOR: Joshua Carrasco Sousa
+#+DRAFT: false
+#+KATEX: false
+#+TAGS[]: webdev
+
+Pepe's Bubbles, is a group project during I worked on during schooling. I was the sole backend developer of the project, and I learned much about backend design by working on it.
+
+# more
+
+Pepes Bubbles is a online storefront for a fictional Bubble Tea store called "Pepe's Bubbles" that we made up. The name/theme of the storefront was arbitrary, as the project was mainly to exercise and demonstrate our web-development skills.
+
+During the development of this project I worked as a the sole back-end developer for our application. I implemented the REST API and GraphQL API with Node.js, and also worked on deployment of our web-app using Dockerized containers running various technologies such as Nginx, MongoDB, Memcached, and Graylog.
+
+The REST API was mainly for easy third party integrations with things like Google SSO, Paypal, Google Maps, and the GraphQL API was used for the project's business logic.
+
+See an extensive description of this project in the project repository.
+
+[[https://github.com/jecars/pepes-bubbles][Github Repository for Pepe's Bubbles]]

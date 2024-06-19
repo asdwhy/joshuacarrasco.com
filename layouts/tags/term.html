@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+<h1 class="text-center mb-5">{{ .Title | strings.FirstUpper }}</h1>
+
+<ul>
+    {{ $lastPost := index (last 1 .Pages) 0 }}
+    {{ range .Pages }}
+    <li>
+        <p>
+            <a href="{{ .RelPermalink }}" class="marked">{{ .LinkTitle }}</a>
+            ({{ .Date | time.Format ":date_medium" }})
+        </p>
+
+        <p>
+            {{ .Summary }}
+        </p>
+
+        {{ if ne $lastPost.Permalink .Permalink }}
+        <hr>
+        {{ end }}
+    </li>
+    {{ end }}
+</ul>
+{{ end }}

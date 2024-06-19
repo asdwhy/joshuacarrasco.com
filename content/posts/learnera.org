@@ -1,0 +1,27 @@
+#+TITLE: Learnera
+#+DATE: 2021-09-04
+#+AUTHOR: Joshua Carrasco Sousa
+#+DRAFT: false
+#+KATEX: false
+#+TAGS[]: webdev
+
+Project Learnera, originally named Project BFS, is a group project during I worked on during schooling.
+
+# more
+
+Project Learnera is a collaboration project with [[https://www.utsc.utoronto.ca/thebridge/][The Bridge]] from [[https://www.utsc.utoronto.ca/][UTSC]]. The goal of the project is to tackle the African Impact Challenge by creating a web platform that combines a community and an E-Learning platform. The goal of the African Impact Challenge is to build the Africa we want to see, by investing in the continent's aspiring entrepreneurs-to-be. The goal is to enable them to build market-creating innovations, which tackle their country's biggest challenges with technology.
+
+We worked on the project from May 2021 to August 2021. The name of our development team was Brute Force Solutions, but we later changed the product name to Learnera.
+
+Features requested at start of development by the product owner:
+
+- Individual profile creations which use the data from the applications/registrations in an automated way, to guide each person’s user journey and recommended actions.
+- Company profile creations with consent-provided access to uploaded information by the founding teams on pitch decks, financials, MCs, founding team, etc.
+- Partner profile creations (investors, service providers, corporations) with relevant information about them.
+- Enabling organic and guided interaction within this community.
+- Virtual pre-recorded content (video/audio and visual) that can be consumed in a self-paced manner.
+- Deliverable completion and submission.
+- Calendar and scheduling features for participants in the incubation program.
+- Video conferencing integration for live workshops/sessions.
+
+[[https://github.com/jecars/learnera][Github Repository for Learnera]]

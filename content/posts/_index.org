@@ -1,0 +1,5 @@
+#+TITLE: Blog
+#+DATE: 2024-02-02T04:14:54-08:00
+#+AUTHOR: Joshua Carrasco Sousa
+#+DRAFT: false
+#+TYPE: page

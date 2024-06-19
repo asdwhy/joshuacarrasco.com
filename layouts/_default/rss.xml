@@ -1,0 +1,24 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ substr (printf "jecars:%s%s" site.Title .RelPermalink) 0 -1}}</title>
+    <link>{{- .Permalink -}}index.xml</link>
+    <description>Recent content from {{ .Permalink -}}</description>
+    <language>{{ site.Language.LanguageCode }}</language>
+    
+    {{- with .OutputFormats.Get "RSS" }}
+    {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{- end }}
+    {{- range .Site.RegularPages | first 15 }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <guid>{{ .Permalink }}</guid>
+      <pubDate>{{ .PublishDate.Format "Mon, 02 Jan 2006" | safeHTML }}</pubDate>
+      <description>
+      {{ .Summary | transform.XMLEscape | safeHTML }}
+      {{ .Content | transform.XMLEscape | safeHTML }}
+      </description>
+    </item>
+    {{- end }}
+  </channel>
+</rss>
