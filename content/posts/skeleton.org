@@ -3,7 +3,7 @@
 #+AUTHOR: Joshua Carrasco Sousa
 #+DRAFT: true
 #+KATEX: true
-#+TAGS[]: Philosophy Math
+#+TAGS[]: philosophy math
 
 This is a summary of this post that will appear when .Summary is called in template files.
 It will also appear at the start of the document

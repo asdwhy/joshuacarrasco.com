@@ -1,0 +1,92 @@
+#+TITLE: Thoughts on Common Lisp
+#+DATE: 2024-06-19
+#+AUTHOR: Joshua Carrasco Sousa
+#+DRAFT: false
+#+KATEX: true
+#+TAGS[]: programming
+
+I'm on a "programming language world tour" to try to find an elegant, expressive, language to replace my usage of C#. Why? For fun. 3 weeks into my Common Lisp (CL) excursion, here is what I think its greatest strength and weakness is.
+
+# more
+
+* Unmatched Interactivity
+
+The experience of programming with the REPL in CL is truly like no other. I haven't found another language with a development cycle quite like this.
+
+While writing Python I often find myself writing several hundred lines of code then testing it all at the same time. Encounter a few errors off the bat, and have to find smaller logical errors as I test the code. Even worse when developing in systems with slow compilation steps, I find myself actively trying to avoid testing my code because it would take too long. Surely if I'm just careful and write it correctly the first time it wouldn't be a problem...
+
+With aid from the CL REPL this is never a problem. I find that I'm *always* able to /build up/ to my solution. 
+
+Let's say I'm writing a function to compute the sample variance of a list of numbers. While this is already solved with libraries, let's try ourselves.
+
+The formula for variance is $S^{2}=\frac{\sum_{i=1}^{n}\left(x_{i}-\overline{x}\right)^{2}}{n - 1}$
+
+Here I'll try to capture the /process/, building up to the final solution:
+
+#+begin_src lisp :tangle no :eval no
+;; Task: compute sample variance of a list
+
+;; Ok, I'll let this guy be my test list
+(defparameter *my-list* '(9.98 9.66 10.41 11.1 9.63))
+
+;; Ok, I need a mean function.
+(/ (reduce #'+ *my-list*)
+   (length *my-list*)) ;; => 10.156
+
+;; *I realize that it iterates over the list twice*
+
+;; rewrite so it only iterates once.
+;; potentially making a few mistakes along the way
+(labels ((aux (lst accum len)
+             (if (null lst)
+                 (/ accum len)
+                 (aux (cdr lst) (+ accum (car lst)) (1+ len)))))
+    (aux *my-list* 0 0)) ;; 10.156, seems right
+
+;; wrap this into a function
+(defun mean (lst)
+  (labels ((aux (lst accum len)
+             (if (null lst)
+                 (/ accum len)
+                 (aux (cdr lst) (+ accum (car lst)) (1+ len)))))
+    (aux lst 0 0)))
+
+;; write sample variance function
+(defun sample-variance (lst)
+  (let ((mean (mean lst)))
+    (labels ((aux (lst accum len)
+              (if (null lst)
+                  (/ accum len)
+                  (aux (cdr lst) (+ accum (expt (- (car lst) mean) 2)) (1+ len)))))
+     (aux lst 0 -1))))
+
+;; use this function to perform some other task
+#+end_src
+
+While writing this function I used the REPL dozens of times, to check my work, as I do it. Had my use case/example involved mutable state, I would have been checking my work in the live environment that my application would actually end up running in. Interactivity like this would be invaluable in a large system involving mutable state, you can debug your applications with access to the entire [[https://stackoverflow.com/questions/480083/what-is-a-lisp-image][lisp image]]. It's hard to convey just how powerful that is, you have to try it!
+
+* Lack of standardized documentation
+
+My biggest gripe with CL is its documentation. I've used [[https://slime.common-lisp.dev/][SLIME]] and [[https://github.com/joaotavora/sly][SLY]], arguably the defacto standard IDE's for CL, and I have problems with language documentation. I can't imagine what it's like if you didn't use Emacs.
+
+Common Lisp is not a single language, but rather a [[https://www.lispworks.com/documentation/HyperSpec/Front/index.htm][specification]] from 1996. The specification has many implementations, the most popular of which is [[https://www.sbcl.org/][SBCL]].
+
+Some implementations may do certain optimizations or little things that others might not, for example SBCL will do a thorough type check given type annotations whereas another implementation might not. This, among other reasons, has created a fragmentation in the CL ecosystem.
+
+It makes sense to me that there isn't a good LSP or culture of standardized documentation given the fragmentation. It would be subject to the scrutiny of developers when an issue could simply be an idiosyncrasy of the CL implementation.
+
+Here is the extent to which I've searched for documentation:
+1. Documentation directly in my editor (great!)
+2. Find documentation online (most frequently HyperSpec or the project's Github) 
+3. Go to definition in editor (occurs more frequently than I'd like)
+
+From the perspective of an API user, I found CL's powerful macro system to be more of a hindrance. More often than I'd like, I find myself learning a brand new domain specific language to perform some action, when it could have been a simple function call. Adding fuel to the fire, a DSL is way more difficult to document than a simple function call.
+
+I understand the argument "just learn the language", but my issue isn't with the language core - rather, I have problems with libraries for which this argument doesn't apply.
+
+* Conclusion
+
+While I enjoy the highly interactive workflows of Common Lisp, I find the lack of standardized documentation in the ecosystem makes CL difficult to work with.
+
+I'm sure theres another language with interactivity that comes relatively close to CL. I plan to continue my "programming language world tour" with OCaml.
+
