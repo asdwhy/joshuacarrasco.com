@@ -1,6 +1,6 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ substr (printf "jecars:%s%s" site.Title .RelPermalink) 0 -1}}</title>
+    <title>{{ substr (printf "jecs:%s%s" site.Title .RelPermalink) 0 -1}}</title>
     <link>{{- .Permalink -}}index.xml</link>
     <description>Recent content from {{ .Permalink -}}</description>
     <language>{{ site.Language.LanguageCode }}</language>

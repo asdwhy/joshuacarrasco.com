@@ -2,7 +2,7 @@
     {{ $last := index (last 1 .Site.Menus.nav) 0 }}
 
     {{ range .Site.Menus.nav }}
-    <a class="nav-link text-reset fw-bold py-0 px-2 disable-marked" href="{{ .URL }}">
+    <a class="nav-link text-reset py-0 px-2 disable-marked" href="{{ .URL }}">
         {{ if .Pre }}
         {{ $icon := .Pre }}
         <i data-feather="{{ $icon }}" class="pb-1" style="width: 20px;"></i>

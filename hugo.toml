@@ -1,4 +1,4 @@
-baseURL = 'https://www.joshuacarrasco.com/'
+baseURL = 'https://www.jecs.me/'
 languageCode = 'en-us'
 title = '~'
 
@@ -7,7 +7,7 @@ title = '~'
 
   [[author]]
     name = "Joshua Carrasco Sousa"
-    email = "mail@joshuacarrasco.com"
+    email = "mail@jecs.me"
 
 [taxonomies]
   tag = 'tags'
